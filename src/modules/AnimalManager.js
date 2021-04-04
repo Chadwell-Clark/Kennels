@@ -8,5 +8,5 @@ export const getAnimalById = (id) => {
 
   export const getAllAnimals = () => {
     return fetch(`${remoteURL}/animals`)
-    .then(result => result.json())
+    .then(response => response.json())
   }

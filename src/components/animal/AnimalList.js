@@ -23,7 +23,7 @@ useEffect(() => {
 //   ***  Use map() to loop over animals array to show list  of animal cards
     return (
         <div className="container-cards">
-            {animals.map(animal => <AnimalCard animal = {animal} key={animal.id} />)}
+            {animals.map(animal => <AnimalCard animal={animal} key={animal.id} />)}
         </div>
     );
 };
