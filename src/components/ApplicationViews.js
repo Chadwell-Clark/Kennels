@@ -1,10 +1,15 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import { Home } from "./Home";
-import { AnimalCard } from "./animal/AnimalCard";
-import { CustomerCard } from "./customer/CustomerCard";
-import { EmployeeCard } from "./employee/EmployeeCard";
-import { LocationCard } from "./location/LocationCard";
+import { AnimalList } from "./animal/AnimalList"
+// import { AnimalCard } from "./animal/AnimalCard";
+// import { CustomerCard } from "./customer/CustomerCard";
+import { CustomerList } from "./customer/CustomerList";
+import { EmployeeList } from "./employee/EmployeeList";
+import { LocationList } from "./location/LocationList";
+
+// import { EmployeeCard } from "./employee/EmployeeCard";
+// import { LocationCard } from "./location/LocationCard";
 import { TacoCard } from "./taco/TacoCard";
 
 export const ApplicationViews = () => {
@@ -17,22 +22,22 @@ export const ApplicationViews = () => {
 
       {/* Render the animal list when http://localhost:3000/animals */}
       <Route path="/animals">
-        <AnimalCard />
+        <AnimalList />
       </Route>
 
       {/* Render the customer card when http://localhost:3000/customers */}
       <Route path="/customers">
-        <CustomerCard />
+        <CustomerList />
       </Route>
 
       {/* Render the employee card when http://localhost:3000/employees */}
       <Route path="/employees">
-        <EmployeeCard />
+        <EmployeeList />
       </Route>
 
       {/* Render the location card when http://localhost:3000/locations */}
       <Route path="/locations">
-        <LocationCard />
+        <LocationList />
       </Route>
 
       {/* Render the TacoCard when http://localhost:3000/tacos */}

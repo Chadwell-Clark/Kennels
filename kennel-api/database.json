@@ -1,8 +1,8 @@
 {
     "animals": [
         { "id": 1, "name": "Doodles", "breed": "Poodle"},
-        { "id": 2, "name": "Decker", "breed": "German Shepherd" },
-        { "id": 3, "name": "Esme", "breed": "Pitbull" }
+        { "id": 2, "name": "Schäferhund", "breed": "German Shepherd" },
+        { "id": 3, "name": "Armando", "breed": "Pitbull" }
     ],
     "customers": [
         {
@@ -12,8 +12,8 @@
         },
         {
             "id": 2,
-            "name": "Hannah Hall",
-            "address": "7002 Chestnut Ct"
+            "name": "Jebus Montigrue",
+            "address": "42 Chestnut Ct"
         },
         {
             "id": 3,
