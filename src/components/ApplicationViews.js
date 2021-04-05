@@ -15,6 +15,7 @@ import { TacoCard } from "./taco/TacoCard";
 export const ApplicationViews = () => {
   return (
     <>
+    {/* Route returns one thing to the location specified by path */}
       {/* Render the location list when http://localhost:3000/ */}
       <Route exact path="/">
         <Home />

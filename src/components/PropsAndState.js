@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 //   ***  Below is vanilla JS  ***..//
+//   !!  props expects an object passed in with keys and values
 export const PropsAndState = ({ yourName }) => {
   let [countClicks, setCountClicks] = useState(0)
 

@@ -11,3 +11,10 @@ export const getAllEmployees = () => {
   return fetch(`${remoteURL}/employees`)
   .then((response) => response.json());
 };
+
+export const terminateEmployee = (id) => {
+  return fetch(`${remoteURL}/employees/${id}`, {
+    method: "DELETE"
+  })
+  .then(response => response.json()) 
+}

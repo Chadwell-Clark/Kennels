@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {  CustomerCard } from "./CustomerCard";
-import { getAllCustomers } from "../../modules/CustomerManager";
+import { getAllCustomers, removeOwner } from "../../modules/CustomerManager";
 
 
 export const CustomerList = () => {
@@ -17,6 +17,12 @@ export const CustomerList = () => {
         });
     };
 
+    const deleteCustomer = (id) => {
+      removeOwner(id)
+      .then(() => getAllCustomers()
+      .then(setCustomers));
+    };
+
     //   ***  Get customers from the API on component's first render   
     useEffect(() => {
         getCustomers();
@@ -26,7 +32,11 @@ export const CustomerList = () => {
     //   ***  Use map() to loop the customer arra to show list of customer cards
     return(
         <div className="container-cards">
-            {customers.map(customer => <CustomerCard  customer={customer} key={customer.id} />)}
+            {customers.map(customer => 
+            <CustomerCard  
+            customer={customer} 
+            key={customer.id} 
+            deleteCustomer={deleteCustomer} />)}
         </div>
     )
 
