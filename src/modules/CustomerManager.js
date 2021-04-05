@@ -10,3 +10,11 @@ const remoteURL = "http://localhost:5002"
     return fetch(`${remoteURL}/customers`)
     .then(response => response.json())
   }
+
+  export const removeOwner = (id) => {
+      return fetch(`${remoteURL}/customers/${id}`, {
+    method: "DELETE"
+  })
+  .then(result => result.json())
+}
+  

@@ -1,62 +1,73 @@
 {
-    "animals": [
-        { "id": 1, "name": "Snowflake", "breed": "Great Pyrenees"},
-        { "id": 2, "name": "Schäferhund", "breed": "German Shepherd" },
-        { "id": 3, "name": "Armando", "breed": "Pitbull" }
-    ],
-    "customers": [
-        {
-            "id": 1,
-            "name": "Saripius Rothburn",
-            "address": "182 Donut Drive",
-            "phone": "615-234-5678"
-        },
-        {
-            "id": 2,
-            "name": "Jebus Montigrue",
-            "address": "42 Chestnut Ct",
-            "phone": "615-253-9273"
-        },
-        {
-            "id": 3,
-            "name": "Hannah Bell",
-            "address": "789 Steppe Lane",
-            "phone": "615-894-3476"
-        }
-    ],
-    "employees": [
-        {
-            "id": 1,
-            "name": "Jenna Shrubb",
-            "address": "1423 Today St"
-        },
-        {
-            "id": 2,
-            "name": "Michael Mechel",
-            "address": "3219 Dateline Rd"
-        },
-        {
-            "id": 3,
-            "name": "Barry Rack",
-            "address": "391 Media Ave"
-        }
-    ],
-    "locations": [
-        {
-            "id": 1,
-            "name": "Nashville North",
-            "address": "8422 Johnson Pike"
-        },
-        {
-            "id": 2,
-            "name": "Nashville South",
-            "address": "209 Emory Drive"
-        },
-        {
-            "id": 3,
-            "name": "Nashville East",
-            "address": "33 Plus Park"
-        }
-    ]
+  "animals": [
+    {
+      "id": 1,
+      "name": "Snowflake",
+      "breed": "Great Pyrenees"
+    },
+    {
+      "id": 2,
+      "name": "Schäferhund",
+      "breed": "German Shepherd"
+    },
+    {
+      "id": 3,
+      "name": "Armando",
+      "breed": "Pitbull"
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "name": "Saripius Rothburn",
+      "address": "182 Donut Drive",
+      "phone": "615-234-5678"
+    },
+    {
+      "id": 2,
+      "name": "Jebus Montigrue",
+      "address": "42 Chestnut Ct",
+      "phone": "615-253-9273"
+    },
+    {
+      "id": 3,
+      "name": "Hannah Bell",
+      "address": "789 Steppe Lane",
+      "phone": "615-894-3476"
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Jenna Shrubb",
+      "address": "1423 Today St"
+    },
+    {
+      "id": 2,
+      "name": "Michael Mechel",
+      "address": "3219 Dateline Rd"
+    },
+    {
+      "id": 3,
+      "name": "Barry Rack",
+      "address": "391 Media Ave"
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "name": "Nashville North",
+      "address": "8422 Johnson Pike"
+    },
+    {
+      "id": 2,
+      "name": "Nashville South",
+      "address": "209 Emory Drive"
+    },
+    {
+      "id": 3,
+      "name": "Nashville East",
+      "address": "33 Plus Park"
+    }
+  ]
 }
-

@@ -11,3 +11,10 @@ export const getAllLocations = () => {
   return fetch(`${remoteURL}/locations`)
   .then((response) => response.json());
 };
+
+export const closeLocation = (id) => {
+  return fetch(`${remoteURL}/locations/${id}`, {
+    method: "DELETE"
+  })
+  .then(response => response.json())
+}
