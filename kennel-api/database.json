@@ -3,17 +3,26 @@
     {
       "id": 1,
       "name": "Snowflake",
-      "breed": "Great Pyrenees"
+      "breed": "Great Pyrenees",
+      "locationId": "3",
+      "customerId": "1",
+      "employeeId": "2"
     },
     {
       "id": 2,
       "name": "Schäferhund",
-      "breed": "German Shepherd"
+      "breed": "German Shepherd",
+      "locationId": "2",
+      "customerId": "2",
+      "employeeId": "3"
     },
     {
       "id": 3,
       "name": "Armando",
-      "breed": "Pitbull"
+      "breed": "Pitbull",
+      "locationId": "1",
+      "customerId": "3",
+      "employeeId": "1"
     }
   ],
   "customers": [
@@ -40,17 +49,20 @@
     {
       "id": 1,
       "name": "Jenna Shrubb",
-      "address": "1423 Today St"
+      "address": "1423 Today St",
+      "locationId": 3
     },
     {
       "id": 2,
       "name": "Michael Mechel",
-      "address": "3219 Dateline Rd"
+      "address": "3219 Dateline Rd",
+      "locationId": 2
     },
     {
       "id": 3,
       "name": "Barry Rack",
-      "address": "391 Media Ave"
+      "address": "391 Media Ave",
+      "locationId": 1
     }
   ],
   "locations": [

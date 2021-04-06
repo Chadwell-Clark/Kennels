@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { AnimalCard } from "./AnimalCard";
 import { getAllAnimals, dischargeAnimal } from "../../modules/AnimalManager";
 ;
+//   ***  AnimalList holds onto the state of the animal array
+//   *** AnimalList is the parent of the Animal card 
+
 //   !!   First:  Start with empty array
 export const AnimalList = () => {
 //   ***  Initial state is empty array  ***   //
@@ -16,11 +19,12 @@ const getAnimals = () => {
         setAnimals(animalsFromAPI)
     });
 };
-//   ***  Delete animals fro database
+//   ***  Delete animals from database
 const deleteAnimal = (id) => {
   dischargeAnimal(id)
-  .then(() => getAllAnimals()
-  .then(setAnimals));
+  .then(getAnimals);
+//   .then(() => getAllAnimals()
+//   .then(setAnimals));
 };
 
 //   !!   Third:  calls getAnimals()
@@ -37,13 +41,9 @@ useEffect(() => {
             <AnimalCard 
             animal={animal} 
             key={animal.id} 
+            // Delete animal is passed into card
             deleteAnimal={deleteAnimal}/>)}
         </div>
     );
 };
 
-// const deleteAnimal = (id) => {
-//     dischargeAnimal(id)
-//     .then(() => getAllAnimals()
-//     .then(setAnimals))
-// }
