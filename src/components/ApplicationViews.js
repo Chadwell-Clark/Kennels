@@ -21,7 +21,7 @@ export const ApplicationViews = () => {
         <Home />
       </Route>
       {/* Render the animal list when http://localhost:3000/animals */}
-      <Route exact path="/animals">
+      <Route  exact path="/animals">
         <AnimalList />
       </Route>
       {/* Render the animal details when http://localhost:3000/animals/(\d+) */}
