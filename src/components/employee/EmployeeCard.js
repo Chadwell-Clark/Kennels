@@ -9,7 +9,7 @@ import "./Employee.css"
 //   </section>
 // );
 
-export const EmployeeCard = ({ employee, deleteEmployee }) => {
+export const EmployeeCard = ({ employee, deleteEmployee, locationList }) => {
   return (
     <div className="card">
       <div className="card-content">
@@ -20,9 +20,9 @@ export const EmployeeCard = ({ employee, deleteEmployee }) => {
           Name: <span className="card-employeeName">{employee.name}</span>
         </h3>
         <p>Address: {employee.address}</p>
-        <button type="button" onClick={() => deleteEmployee(employee.id)}>
+        {locationList?"":<button type="button" onClick={() => deleteEmployee(employee.id)}>
           Terminate Employee
-        </button>
+        </button>}
       </div>
     </div>
   );

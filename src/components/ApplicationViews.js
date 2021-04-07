@@ -7,7 +7,7 @@ import { AnimalDetail } from "./animal/AnimalDetail";
 import { CustomerList } from "./customer/CustomerList";
 import { EmployeeList } from "./employee/EmployeeList";
 import { LocationList } from "./location/LocationList";
-
+import { AnimalForm } from "./animal/AnimalForm";
 // import { EmployeeCard } from "./employee/EmployeeCard";
 import { LocationDetail } from "./location/LocationDetail";
 import { TacoCard } from "./taco/TacoCard";
@@ -21,16 +21,24 @@ export const ApplicationViews = () => {
         <Home />
       </Route>
       {/* Render the animal list when http://localhost:3000/animals */}
-      <Route  exact path="/animals">
+      <Route exact path="/animals">
         <AnimalList />
       </Route>
       {/* Render the animal details when http://localhost:3000/animals/(\d+) */}
-      {/* (\d+) is the route parameter */}
+      {/* (\d+) is the route parameter digit(s) via regex */}
       <Route path="/animals/:animalId(\d+)">
         <AnimalDetail />
       </Route>
+      {/* Render the AnimalForm when http://localhost:3000/animals/create */}
+      <Route path="/animals/create">
+        <AnimalForm />
+      </Route>
       {/* Render the customer card when http://localhost:3000/customers */}
       <Route path="/customers">
+        <CustomerList />
+      </Route>
+      {/* Render CustomerForm when http://localhost:3000/customers/create */}
+      <Route path="/customers/create">
         <CustomerList />
       </Route>
       {/* Render the employee card when http://localhost:3000/employees */}
