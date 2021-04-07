@@ -5,24 +5,28 @@
       "name": "Snowflake",
       "breed": "Great Pyrenees",
       "locationId": "3",
-      "customerId": "1",
-      "employeeId": "2"
+      "customerId": "1"
     },
     {
       "id": 2,
       "name": "Schäferhund",
       "breed": "German Shepherd",
       "locationId": "2",
-      "customerId": "2",
-      "employeeId": "3"
+      "customerId": "2"
     },
     {
       "id": 3,
       "name": "Armando",
       "breed": "Pitbull",
       "locationId": "1",
-      "customerId": "3",
-      "employeeId": "1"
+      "customerId": "3"
+    },
+    {
+      "name": "Snoopy",
+      "breed": "Dog with spot",
+      "locationId": 2,
+      "customerId": 1,
+      "id": 4
     }
   ],
   "customers": [
@@ -62,6 +66,24 @@
       "id": 3,
       "name": "Barry Rack",
       "address": "391 Media Ave",
+      "locationId": 1
+    },
+    {
+      "id": 4,
+      "name": "Yar Krass",
+      "address": "333 Third Ave",
+      "locationId": 3
+    },
+    {
+      "id": 5,
+      "name": "Belinda Montrose",
+      "address": "739 Belcourt Rd",
+      "locationId": 2
+    },
+    {
+      "id": 6,
+      "name": "Zanima Grubble",
+      "address": "921 Twin River Dr",
       "locationId": 1
     }
   ],

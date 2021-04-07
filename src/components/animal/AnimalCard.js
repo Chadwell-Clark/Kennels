@@ -9,7 +9,7 @@ import "./Animal.css";
 
 //   </section>
 // );
-export const AnimalCard = ({ animal, deleteAnimal }) => {
+export const AnimalCard = ({ animal, deleteAnimal, isLoading }) => {
   return (
     <div className="card">
       <div className="card-content">
@@ -20,7 +20,7 @@ export const AnimalCard = ({ animal, deleteAnimal }) => {
           Name: <span className="card-petname">{animal.name}</span>
         </h3>
         <p>Breed: {animal.breed}</p>
-        <button type="button" onClick={() => deleteAnimal(animal.id)}>
+        <button type="button" disabled= {isLoading} onClick={() => deleteAnimal(animal.id)}>
           Discharge
         </button>
         <Link to={`/animals/${animal.id}`}>
