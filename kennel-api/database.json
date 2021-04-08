@@ -97,6 +97,12 @@
       "address": "23 AndMe Dr",
       "locationId": 2,
       "id": 10
+    },
+    {
+      "name": "Jeb Strunk",
+      "address": "34 Clabble Court",
+      "locationId": 4,
+      "id": 11
     }
   ],
   "locations": [
@@ -114,6 +120,12 @@
       "id": 3,
       "name": "Nashville East",
       "address": "33 Plus Park"
+    },
+    {
+      "name": "Nashville West",
+      "address": "444 West West St",
+      "employeeId": 0,
+      "id": 4
     }
   ]
 }

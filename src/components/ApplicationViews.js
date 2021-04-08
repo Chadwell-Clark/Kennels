@@ -7,6 +7,7 @@ import { AnimalDetail } from "./animal/AnimalDetail";
 import { CustomerList } from "./customer/CustomerList";
 import { EmployeeList } from "./employee/EmployeeList";
 import { LocationList } from "./location/LocationList";
+import { LocationForm } from "./location/LocationForm";
 import { AnimalForm } from "./animal/AnimalForm";
 import {CustomerForm} from "./customer/CustomerForm";
 import { EmployeeForm } from "./employee/EmployeeForm";
@@ -54,6 +55,10 @@ export const ApplicationViews = () => {
       {/* Render the location card when http://localhost:3000/locations */}
       <Route exact path="/locations">
         <LocationList />
+      </Route>
+      {/* Render the location form when http://localhost:3000/locations/create */}
+      <Route exact path="/locations/create">
+        <LocationForm />
       </Route>
       {/* Render the location details when http://localhost:3000/locations/(\d+) */}
       <Route path="/locations/:locationId(\d+)">

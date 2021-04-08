@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { LocationCard } from "./LocationCard";
 import { closeLocation, getAllLocations } from "../../modules/LocationManager";
+import { useHistory } from "react-router";
 
 export const LocationList = () => {
   //  ***  set the initial state to an empty array
   const [locations, setLocations] = useState([]);
+
+  const history =useHistory();
 
   const getLocations = () => {
     //   ***  When the data comes back from API
@@ -28,13 +31,27 @@ const deleteLocation = (id) => {
 
   //   ***  Use map() to loop the location arra to show list of location cards
   return (
-    <div className="container-cards">
-      {locations.map((location) => (
-        <LocationCard 
-        location={location} 
-        key={location.id} 
-        deleteLocation={deleteLocation}/>
-      ))}
-    </div>
+    <>
+      <section className="section-content">
+        <button
+          type="button"
+          className="btn"
+          onClick={() => {
+            history.push("/locations/create");
+          }}
+        >
+          Add New Location
+        </button>
+      </section>
+      <div className="container-cards">
+        {locations.map((location) => (
+          <LocationCard
+            location={location}
+            key={location.id}
+            deleteLocation={deleteLocation}
+          />
+        ))}
+      </div>
+    </>
   );
 };
