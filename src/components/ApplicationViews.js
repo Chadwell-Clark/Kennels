@@ -1,5 +1,5 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 import { Home } from "./Home";
 import { AnimalList } from "./animal/AnimalList"
 import { AnimalDetail } from "./animal/AnimalDetail";
@@ -14,8 +14,16 @@ import { EmployeeForm } from "./employee/EmployeeForm";
 import { EmployeeDetail } from "./employee/EmployeeDetail";
 import { LocationDetail } from "./location/LocationDetail";
 import { TacoCard } from "./taco/TacoCard";
+import { Login } from "../components/auth/Login";
+import { Register } from "../components/auth/Register";
+import { AnimalEditForm } from "./animal/AnimalEditForm";
+
+
+
 
 export const ApplicationViews = () => {
+  const isAuthenticated = () =>
+    sessionStorage.getItem("kennel_customer") !== null;
   return (
     <>
       {/* Route returns one thing to the location specified by path */}
@@ -25,17 +33,20 @@ export const ApplicationViews = () => {
       </Route>
       {/* Render the animal list when http://localhost:3000/animals */}
       <Route exact path="/animals">
-        <AnimalList />
+        {isAuthenticated() ? <AnimalList /> : <Redirect to="/login" />}
       </Route>
       {/* Render the animal details when http://localhost:3000/animals/(\d+) */}
       {/* (\d+) is the route parameter digit(s) via regex */}
-      <Route path="/animals/:animalId(\d+)">
+      <Route exact path="/animals/:animalId(\d+)">
         <AnimalDetail />
       </Route>
       {/* Render the AnimalForm when http://localhost:3000/animals/create */}
       <Route path="/animals/create">
         <AnimalForm />
       </Route>
+      <Route path="/animals/:animalId(\d+)/edit">
+     <AnimalEditForm />
+   </Route>
       {/* Render the customer card when http://localhost:3000/customers */}
       <Route exact path="/customers">
         <CustomerList />
@@ -75,6 +86,14 @@ export const ApplicationViews = () => {
       {/* Render the TacoCard when http://localhost:3000/tacos */}
       <Route path="/tacos">
         <TacoCard />
+      </Route>
+
+      <Route path="/login">
+        <Login />
+      </Route>
+
+      <Route path="/register">
+        <Register />
       </Route>
     </>
   );
