@@ -34,13 +34,18 @@ export const LocationDetail = () => {
     <section className="location">
       <h3 className="location__name">{location.name}</h3>
       <div className="location__address">{location.address}</div>
+      <h4>Employees:</h4>
       {/* Can Map over employees and either make a component to put the employee in or
       use the employeeCard and pass in a flag that when present will keep the 
       delete button from showing via a ternary */}
-      {location.employees?.map((employee) => 
-      (<div key={employee.id}>{employee.name}</div>)
-        // <EmployeeCard key={employee.id} locationList employee={employee} />
-)}
+      {location.employees?.map(
+        (employee) => 
+        //   <>
+        //     <div key={employee.id}>{employee.name}</div>
+        //   </>
+        // )
+        <EmployeeCard key={employee.id} locationList employee={employee} />
+      )}
       {/* What's up with the question mark???? See below.*/}
       {/* <div className="location__employee">Employee: {location.employees?.name}</div> */}
       {/* <div className="location__employee">Employee: {location.employees?.name}</div> */}
