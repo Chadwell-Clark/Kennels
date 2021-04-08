@@ -17,6 +17,8 @@ import { TacoCard } from "./taco/TacoCard";
 import { Login } from "../components/auth/Login";
 import { Register } from "../components/auth/Register";
 import { AnimalEditForm } from "./animal/AnimalEditForm";
+import { LocationEditForm } from "./location/LocationEditForm";
+import { CustomerEditForm } from "./customer/CustomerEditForm";
 
 
 
@@ -45,19 +47,23 @@ export const ApplicationViews = () => {
         <AnimalForm />
       </Route>
       <Route path="/animals/:animalId(\d+)/edit">
-     <AnimalEditForm />
-   </Route>
+        <AnimalEditForm />
+      </Route>
       {/* Render the customer card when http://localhost:3000/customers */}
       <Route exact path="/customers">
         <CustomerList />
       </Route>
       {/* Render the customer card when http://localhost:3000/customers */}
-      <Route path="/customers/:customerId(\d+)">
+      <Route exact path="/customers/:customerId(\d+)">
         <CustomerDetail />
       </Route>
       {/* Render CustomerForm when http://localhost:3000/customers/create */}
       <Route path="/customers/create">
         <CustomerForm />
+      </Route>
+      {/* Render the customer card when http://localhost:3000/customers */}
+      <Route path="/customers/:customerId(\d+)/edit">
+        <CustomerEditForm />
       </Route>
       {/* Render the employee card when http://localhost:3000/employees */}
       <Route exact path="/employees">
@@ -80,8 +86,12 @@ export const ApplicationViews = () => {
         <LocationForm />
       </Route>
       {/* Render the location details when http://localhost:3000/locations/(\d+) */}
-      <Route path="/locations/:locationId(\d+)">
+      <Route exact path="/locations/:locationId(\d+)">
         <LocationDetail />
+      </Route>
+      {/* Render the location details when http://localhost:3000/locations/(\d+)/edit */}
+      <Route exact path="/locations/:locationId(\d+)/edit">
+        <LocationEditForm />
       </Route>
       {/* Render the TacoCard when http://localhost:3000/tacos */}
       <Route path="/tacos">
