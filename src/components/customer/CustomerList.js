@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {  CustomerCard } from "./CustomerCard";
-import { getAllCustomers, removeOwner } from "../../modules/CustomerManager";
+import { getAllCustomers, removeCustomer } from "../../modules/CustomerManager";
 import { useHistory } from "react-router";
 
 
@@ -20,7 +20,7 @@ export const CustomerList = () => {
     };
 
     const deleteCustomer = (id) => {
-      removeOwner(id)
+      removeCustomer(id)
       .then(() => getAllCustomers()
       .then(setCustomers));
     };

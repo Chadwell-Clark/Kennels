@@ -12,7 +12,6 @@ export const LocationForm = () => {
   const [location, setLocation] = useState({
     name: "",
     address: "",
-    employeeId: 0,
   });
 
   //   const [isLoading, setIsLoading] = useState(false);

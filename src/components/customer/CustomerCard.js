@@ -1,5 +1,6 @@
 import React from "react"
 import "./Customer.css"
+import { Link } from "react-router-dom";
 
 // export const CustomerCard = ({ customer }) => (
 //   <section className="customer">
@@ -24,6 +25,9 @@ import "./Customer.css"
          <button type="button" onClick={() => deleteCustomer(customer.id)}>
            Remove Owner
          </button>
+         <Link to={`/customers/${customer.id}`}>
+           <button>Details</button>
+         </Link>
        </div>
      </div>
    );
