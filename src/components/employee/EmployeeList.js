@@ -36,6 +36,7 @@ const deleteEmployee = (id) => {
       <section className="section-content">
         <button
           type="button"
+          id="addBtn"
           className="btn"
           onClick={() => {
             history.push("/employees/create");

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { AnimalCard } from "./AnimalCard";
 import { getAllAnimals, dischargeAnimal } from "../../modules/AnimalManager";
 import { useHistory } from "react-router";
+import "./AnimalList.css";
 ;
 //   ***  AnimalList holds onto the state of the animal array
 //   *** AnimalList is the parent of the Animal card 
@@ -44,9 +45,10 @@ useEffect(() => {
         <>
         <section className="section-content">
   <button type="button"
+  id="addBtn"
       className="btn"
       onClick={() => {history.push("/animals/create")}}>
-      Admit Animal
+      Admit New Animal
   </button>
 </section>
         <div className="container-cards">
