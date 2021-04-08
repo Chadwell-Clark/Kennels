@@ -1,5 +1,6 @@
 import React from "react";
 import "./Employee.css"
+import { Link } from "react-router-dom";
 
 // export const EmployeeCard = ({employee}) => (
 //   <section className="employee">
@@ -20,9 +21,16 @@ export const EmployeeCard = ({ employee, deleteEmployee, locationList }) => {
           Name: <span className="card-employeeName">{employee.name}</span>
         </h3>
         <p>Address: {employee.address}</p>
-        {locationList?"":<button type="button" onClick={() => deleteEmployee(employee.id)}>
-          Terminate Employee
-        </button>}
+        {locationList ? (
+          ""
+        ) : (
+          <button type="button" onClick={() => deleteEmployee(employee.id)}>
+            Terminate Employee
+          </button>
+        )}
+        <Link to={`/employees/${employee.id}`}>
+          <button>Details</button>
+        </Link>
       </div>
     </div>
   );

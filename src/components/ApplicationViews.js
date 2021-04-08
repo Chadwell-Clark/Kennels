@@ -3,7 +3,7 @@ import { Route } from "react-router-dom";
 import { Home } from "./Home";
 import { AnimalList } from "./animal/AnimalList"
 import { AnimalDetail } from "./animal/AnimalDetail";
-// import { CustomerCard } from "./customer/CustomerCard";
+import { CustomerDetail } from "./customer/CustomerDetail";
 import { CustomerList } from "./customer/CustomerList";
 import { EmployeeList } from "./employee/EmployeeList";
 import { LocationList } from "./location/LocationList";
@@ -11,7 +11,7 @@ import { LocationForm } from "./location/LocationForm";
 import { AnimalForm } from "./animal/AnimalForm";
 import {CustomerForm} from "./customer/CustomerForm";
 import { EmployeeForm } from "./employee/EmployeeForm";
-// import { EmployeeCard } from "./employee/EmployeeCard";
+import { EmployeeDetail } from "./employee/EmployeeDetail";
 import { LocationDetail } from "./location/LocationDetail";
 import { TacoCard } from "./taco/TacoCard";
 
@@ -40,6 +40,10 @@ export const ApplicationViews = () => {
       <Route exact path="/customers">
         <CustomerList />
       </Route>
+      {/* Render the customer card when http://localhost:3000/customers */}
+      <Route path="/customers/:customerId(\d+)">
+        <CustomerDetail />
+      </Route>
       {/* Render CustomerForm when http://localhost:3000/customers/create */}
       <Route path="/customers/create">
         <CustomerForm />
@@ -47,6 +51,10 @@ export const ApplicationViews = () => {
       {/* Render the employee card when http://localhost:3000/employees */}
       <Route exact path="/employees">
         <EmployeeList />
+      </Route>
+      {/* Render the employee card when http://localhost:3000/employees */}
+      <Route exact path="/employees/:employeeId(\d+)">
+        <EmployeeDetail />
       </Route>
       {/* Render EmployeeForm when http://localhost:3000/employee/create */}
       <Route path="/employees/create">

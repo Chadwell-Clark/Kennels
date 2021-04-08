@@ -11,7 +11,7 @@ export const getAllCustomers = () => {
   .then((response) => response.json());
 };
 
-export const removeOwner = (id) => {
+export const removeCustomer = (id) => {
   return fetch(`${remoteURL}/customers/${id}`, {
     method: "DELETE",
   })
