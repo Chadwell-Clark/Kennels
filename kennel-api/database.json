@@ -3,8 +3,8 @@
     {
       "id": 1,
       "name": "Snowflake",
-      "breed": "Great Pyrenees",
-      "locationId": "3",
+      "breed": "Greatest Pyrenees",
+      "locationId": 2,
       "customerId": "1"
     },
     {
@@ -41,25 +41,34 @@
       "id": 1,
       "name": "Saripius Rothburn",
       "address": "182 Donut Drive",
-      "phone": "615-234-5678"
+      "phone": "615-234-5678",
+      "email": "Saripius@Roth.burn"
     },
     {
       "id": 2,
       "name": "Jebus Montigrue",
       "address": "42 Chestnut Ct",
-      "phone": "615-253-9273"
+      "phone": "615-253-9273",
+      "email": "Jebus@Mon.t"
     },
     {
       "id": 3,
       "name": "Hannah Bell",
       "address": "789 Steppe Lane",
-      "phone": "615-894-3476"
+      "phone": "615-894-3476",
+      "email": "hannah@han.nah"
     },
     {
       "name": "Glass Cleaner",
       "address": "539 Spray Way",
       "phone": "615-345-6741",
-      "id": 4
+      "id": 4,
+      "email": "Glass@clean.er"
+    },
+    {
+      "email": "FZ@fz.com",
+      "name": "Frank Zappa",
+      "id": 5
     }
   ],
   "employees": [

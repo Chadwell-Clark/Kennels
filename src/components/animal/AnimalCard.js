@@ -20,12 +20,15 @@ export const AnimalCard = ({ animal, deleteAnimal, isLoading }) => {
           Name: <span className="card-petname">{animal.name}</span>
         </h3>
         <p>Breed: {animal.breed}</p>
-        <button type="button" disabled= {isLoading} onClick={() => deleteAnimal(animal.id)}>
-          Discharge
-        </button>
         <Link to={`/animals/${animal.id}`}>
           <button>Details</button>
         </Link>
+        <Link to={`/animals/${animal.id}/edit`}>
+          <button>Edit</button>
+          </Link>
+        <button type="button" disabled= {isLoading} onClick={() => deleteAnimal(animal.id)}>
+          Discharge
+        </button>
       </div>
     </div>
   );
