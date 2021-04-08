@@ -15,7 +15,7 @@ export const AnimalForm = () => {
     customerId: 0,
   });
 
-  const [isLoading, setIsLoading] = useState(false);
+//   const [isLoading, setIsLoading] = useState(false);
 
   // you will need the the `getAll` in the LocationsManager and CustomersManager to complete this section
   const [locations, setLocations] = useState([]);

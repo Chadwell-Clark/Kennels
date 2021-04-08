@@ -1,10 +1,95 @@
 .navbar {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: left;
+    justify-content: space-around;
+    background:#6494edc9;
+    color: white;
+    padding: 2rem 0;
 }
 
 .navbar__item {
-    flex-basis: 20%;
+    /* flex-basis: 15%; */
     list-style-type: none;
+    /* text-decoration: none; */
+}
+
+.navbar__link {
+ padding: 1rem;
+cursor: pointer;
+}
+/* .navbar__link {    
+  background:
+    radial-gradient(farthest-side,rgba(255, 233, 135, 0.6) calc(100% - 100px),#0000 ) center/0% 0% no-repeat
+    #000;
+    background-clip:text;
+  -webkit-background-clip:text;
+  transition:0.8s;
+}
+.navbar__link:hover {  
+  background-size:400px 400px;
+ } */
+
+ /* .navbar__link {
+  background: 
+     linear-gradient(transparent, black) 
+     bottom /100% var(--d, 0) no-repeat;
+  transition: 0.5s;
+}
+.navbar__link:hover {
+  --d: 12px;
+} */
+
+/* .navbar__link {
+   padding:8px;
+   box-shadow:
+    0 0 0px #000 inset,
+    0 0 0px #000;
+   transition:0.5s;
+ }
+ .navbar__link:hover {
+   box-shadow:
+    0 0 10px #000 inset,
+    0 0 10px #000;
+    border-radius: 10px;
+ } */
+  /* .navbar__link {   
+  background:
+    radial-gradient(farthest-side,#0000 ,rgba(255,204,135,0.6) calc(100% - 200px),#0000 ) center/0% 0% no-repeat
+    #000;
+  -webkit-background-clip:text;
+  background-clip:text;
+  transition:0s;
+}
+.navbar__link:hover {  
+  background-size:1000px 1000px;
+  transition:0.8s;
+ } */
+
+ /* .navbar__link {
+   margin:50px 25px;
+   padding:8px;
+   box-shadow:0 0 0px 80px var(--c,#0000);
+   background:var(--c,#0000);
+  transition: 0.3s,box-shadow 0.3s 0.3s,background 0.3s 0.3s,color 0.3s 0.3s;
+   clip-path: polygon(0 0,0 0,40% 0,45% 0,55% 0,60% 0,100% 0,100% 0,100% 50%,100% 100%,100% 100%,60% 100%,55% 100%,45% 100%,40% 100%,0 100%,0 100%,0 50%);
+ }
+ .navbar__link:hover{
+  --c:#000;
+  color:#fff;
+  transition: 0.3s,clip-path 0.4s 0.3s; 
+   clip-path: polygon(0 -90px,0 10%,30% 0,40% -20px,60% -20px,70% 0,100% 10%,100% -90px,calc(100% + 15px) 50%,100% calc(100% + 90px),100% 90%,70% 100%,60% calc(100% + 20px),40% calc(100% + 20px),30% 100%,0 90%,0 calc(100% + 90px),-20px 50%);
+ } */
+
+ .navbar__link {
+  background:
+    linear-gradient(currentColor 0 0) 0 0,
+    linear-gradient(currentColor 0 0) 0 0,
+    linear-gradient(currentColor 0 0) 100% 100%,
+    linear-gradient(currentColor 0 0) 100% 100%;
+  background-size: var(--d, 0) 3px, 3px var(--d, 0);
+  background-repeat: no-repeat;
+  transition: 0.3s;
+}
+.navbar__link:hover {
+  --d: 100%;
 }

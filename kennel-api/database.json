@@ -47,6 +47,12 @@
       "name": "Hannah Bell",
       "address": "789 Steppe Lane",
       "phone": "615-894-3476"
+    },
+    {
+      "name": "Glass Cleaner",
+      "address": "539 Spray Way",
+      "phone": "615-345-6741",
+      "id": 4
     }
   ],
   "employees": [
@@ -85,6 +91,12 @@
       "name": "Zanima Grubble",
       "address": "921 Twin River Dr",
       "locationId": 1
+    },
+    {
+      "name": "BD",
+      "address": "23 AndMe Dr",
+      "locationId": 2,
+      "id": 10
     }
   ],
   "locations": [
