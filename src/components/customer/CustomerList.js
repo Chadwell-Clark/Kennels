@@ -37,6 +37,7 @@ export const CustomerList = () => {
         <section className="section-content">
           <button
             type="button"
+            id="addBtn"
             className="btn"
             onClick={() => {
               history.push("/customers/create");
