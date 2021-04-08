@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Route, Redirect } from "react-router-dom";
 import { Home } from "./Home";
 import { AnimalList } from "./animal/AnimalList"
@@ -19,13 +19,22 @@ import { Register } from "../components/auth/Register";
 import { AnimalEditForm } from "./animal/AnimalEditForm";
 import { LocationEditForm } from "./location/LocationEditForm";
 import { CustomerEditForm } from "./customer/CustomerEditForm";
+import { EmployeeEditForm } from "./employee/EmployeeEditForm";
+
 
 
 
 
 export const ApplicationViews = () => {
-  const isAuthenticated = () =>
-    sessionStorage.getItem("kennel_customer") !== null;
+  const [isAuthenticated, setIsAuthenticated] = useState(
+    sessionStorage.getItem("kennel_customer") !== null
+  );
+
+  const setAuthUser = (user) => {
+    sessionStorage.setItem("kennel_customer", JSON.stringify(user));
+    setIsAuthenticated(sessionStorage.getItem("kennel_customer") !== null);
+  };
+
   return (
     <>
       {/* Route returns one thing to the location specified by path */}
@@ -35,7 +44,7 @@ export const ApplicationViews = () => {
       </Route>
       {/* Render the animal list when http://localhost:3000/animals */}
       <Route exact path="/animals">
-        {isAuthenticated() ? <AnimalList /> : <Redirect to="/login" />}
+        {isAuthenticated ? <AnimalList /> : <Redirect to="/login" />}
       </Route>
       {/* Render the animal details when http://localhost:3000/animals/(\d+) */}
       {/* (\d+) is the route parameter digit(s) via regex */}
@@ -77,6 +86,10 @@ export const ApplicationViews = () => {
       <Route path="/employees/create">
         <EmployeeForm />
       </Route>
+      {/* Render the employee card when http://localhost:3000/employees(\d+)/edit */}
+      <Route exact path="/employees/:employeeId(\d+)/edit">
+        <EmployeeEditForm />
+      </Route>
       {/* Render the location card when http://localhost:3000/locations */}
       <Route exact path="/locations">
         <LocationList />
@@ -99,11 +112,11 @@ export const ApplicationViews = () => {
       </Route>
 
       <Route path="/login">
-        <Login />
+        <Login setAuthUser={setAuthUser} />
       </Route>
 
       <Route path="/register">
-        <Register />
+        <Register setAuthUser={setAuthUser} />
       </Route>
     </>
   );

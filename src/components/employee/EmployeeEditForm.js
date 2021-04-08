@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from "react";
-import { updateAnimal, getAnimalById } from "../../modules/AnimalManager";
-import "./AnimalForm.css";
+import { updateEmployee, getEmployeeById } from "../../modules/EmployeeManager";
+import "./EmployeeForm.css";
 import { useParams, useHistory } from "react-router-dom";
 import { getAllLocations } from "../../modules/LocationManager";
-import { getAllCustomers } from "../../modules/CustomerManager";
+// import { getAllCustomers } from "../../modules/CustomerManager";
 
-export const AnimalEditForm = () => {
-  const [animal, setAnimal] = useState({});
+export const EmployeeEditForm = () => {
+  const [employee, setEmployee] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [locations, setLocations] = useState([]);
-  const [customers, setCustomers] = useState([]);
+//   const [customers, setCustomers] = useState([]);
 
-  const { animalId } = useParams();
+  const { employeeId } = useParams();
   const history = useHistory();
 
-  //   ***  Every keystroke updates the state of the animal object
+  //   ***  Every keystroke updates the state of the employee object
   const handleFieldChange = (event) => {
-    const stateToChange = { ...animal };
+    const stateToChange = { ...employee };
     let editedVal = event.target.value;
 
     if (event.target.id.includes("Id")) {
@@ -24,7 +24,7 @@ export const AnimalEditForm = () => {
     }
 
     stateToChange[event.target.id] = editedVal;
-    setAnimal(stateToChange);
+    setEmployee(stateToChange);
   };
   useEffect(() => {
     getAllLocations().then((locationsFromAPI) => {
@@ -32,30 +32,30 @@ export const AnimalEditForm = () => {
     });
   }, []);
 
-  useEffect(() => {
-    getAllCustomers().then((customersFromAPI) => {
-      setCustomers(customersFromAPI);
-    });
-  }, []);
-  const updateExistingAnimal = (evt) => {
+//   useEffect(() => {
+//     getAllCustomers().then((customersFromAPI) => {
+//       setCustomers(customersFromAPI);
+//     });
+//   }, []);
+  const updateExistingEmployee = (evt) => {
     evt.preventDefault();
     setIsLoading(true);
 
     // This is an edit, so we need the id
-    const editedAnimal = {
-      id: animalId,
-      name: animal.name,
-      breed: animal.breed,
-      locationId: animal.locationId,
-      customerId: animal.customerId,
+    const editedEmployee = {
+      id: employeeId,
+      name: employee.name,
+      address: employee.address,
+      locationId: employee.locationId,
+    //   customerId: employee.customerId,
     };
 
-    updateAnimal(editedAnimal).then(() => history.push("/animals"));
+    updateEmployee(editedEmployee).then(() => history.push("/employees"));
   };
 
   useEffect(() => {
-    getAnimalById(animalId).then((animal) => {
-      setAnimal(animal);
+    getEmployeeById(employeeId).then((employee) => {
+      setEmployee(employee);
       setIsLoading(false);
     });
   }, []);
@@ -71,25 +71,25 @@ export const AnimalEditForm = () => {
               className="form-control"
               onChange={handleFieldChange}
               id="name"
-              value={animal.name}
+              value={employee.name}
             />
-            <label htmlFor="name">Animal name</label>
+            <label htmlFor="name">Employee name</label>
 
             <input
               type="text"
               required
               className="form-control"
               onChange={handleFieldChange}
-              id="breed"
-              value={animal.breed}
+              id="address"
+              value={employee.address}
             />
-            <label htmlFor="breed">Breed</label>
+            <label htmlFor="employee">Employee</label>
           </div>
           <fieldset>
             <div className="form-group">
               <label htmlFor="location">Assign to location: </label>
               <select
-                value={animal.locationId}
+                value={employee.locationId}
                 name="locationId"
                 id="locationId"
                 onChange={handleFieldChange}
@@ -104,11 +104,11 @@ export const AnimalEditForm = () => {
               </select>
             </div>
           </fieldset>
-          <fieldset>
+          {/* <fieldset>
             <div className="form-group">
               <label htmlFor="customerId">Customer: </label>
               <select
-                value={animal.customerId}
+                value={employee.customerId}
                 name="customer"
                 id="customerId"
                 onChange={handleFieldChange}
@@ -122,12 +122,12 @@ export const AnimalEditForm = () => {
                 ))}
               </select>
             </div>
-          </fieldset>
+          </fieldset> */}
           <div className="alignRight">
             <button
               type="button"
               disabled={isLoading}
-              onClick={updateExistingAnimal}
+              onClick={updateExistingEmployee}
               className="btn btn-primary"
             >
               Submit
