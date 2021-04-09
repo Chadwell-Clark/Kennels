@@ -13,9 +13,9 @@ export const AnimalCard = ({ animal, deleteAnimal, isLoading }) => {
   return (
     <div className="card">
       <div className="card-content">
-        <picture>
+        {/* <picture>
           <img src={require("./dog.svg")} alt="My Dog" />
-        </picture>
+        </picture> */}
         <h3>
           Name: <span className="card-petname">{animal.name}</span>
         </h3>
