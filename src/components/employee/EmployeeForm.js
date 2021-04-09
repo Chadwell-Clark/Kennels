@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router";
 import { addEmployee } from "../../modules/EmployeeManager";
 import "./EmployeeForm.css";
-import { EmployeeList } from "./EmployeeList";
 import {getAllLocations} from "../../modules/LocationManager";
 
 export const EmployeeForm = () => {

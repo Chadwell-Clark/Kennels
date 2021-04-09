@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router";
 import { addLocation } from "../../modules/LocationManager";
 // import { getAllEmployees } from "../../modules/employeeManager";

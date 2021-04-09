@@ -60,7 +60,7 @@ export const AnimalEditForm = () => {
       setAnimal(animal);
       setIsLoading(false);
     });
-  }, []);
+  }, [animalId] );
 
   return (
     <>

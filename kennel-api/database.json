@@ -5,21 +5,21 @@
       "name": "Snowflake",
       "breed": "Greatest Pyrenees",
       "locationId": 2,
-      "customerId": "1"
+      "customerId": 1
     },
     {
       "id": 2,
       "name": "Schäferhund",
       "breed": "German Shepherd",
-      "locationId": "2",
-      "customerId": "2"
+      "locationId": 2,
+      "customerId": 2
     },
     {
       "id": 3,
       "name": "Armando",
       "breed": "Pitbull",
-      "locationId": "1",
-      "customerId": "3"
+      "locationId": 1,
+      "customerId": 3
     },
     {
       "name": "Snoopy",
