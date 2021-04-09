@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./NavBar.css";
 
 export const NavBar = () => {
@@ -8,34 +8,53 @@ export const NavBar = () => {
       <li className="navbar__item active">
         {/* Link is used by react-router-dom to link a path to the matching Route with the same url */}
         {/* to="x" is the url path in the address bar */}
-        <Link className="navbar__link" to="/">
+        <NavLink  className="navbar__link" to="/">
           NSS Kennels
-        </Link>
+        </NavLink>
       </li>
       <li className="navbar__item">
-        <Link className="navbar__link" to="/locations">
+        <NavLink
+          activeClassName="navlink"
+          className="navbar__link"
+          to="/locations"
+        >
           Locations
-        </Link>
+        </NavLink>
       </li>
       <li className="navbar__item">
-        <Link className="navbar__link" to="/animals">
+        <NavLink
+          activeClassName="navlink"
+          className="navbar__link"
+          to="/animals"
+        >
           Animals
-        </Link>
+        </NavLink>
       </li>
       <li className="navbar__item">
-        <Link className="navbar__link" to="/customers">
+        <NavLink
+          activeClassName="navlink"
+          className="navbar__link"
+          to="/customers"
+        >
           Customers
-        </Link>
+        </NavLink>
       </li>
       <li className="navbar__item">
-        <Link className="navbar__link" to="/employees">
+        <NavLink
+          activeClassName="navlink"
+          className="navbar__link"
+          to="/employees"
+        >
           Employees
-        </Link>
+        </NavLink>
       </li>
       <li className="navbar__item">
-        <Link className="navbar__link" to="/tacos">
+        <NavLink 
+        activeClassName="navlink" 
+        className="navbar__link" 
+        to="/tacos">
           Tacos
-        </Link>
+        </NavLink>
       </li>
     </ul>
   );

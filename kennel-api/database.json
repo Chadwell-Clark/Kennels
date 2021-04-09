@@ -40,9 +40,9 @@
     {
       "id": 1,
       "name": "Saripius Rothburn",
-      "address": "182 Donut Drive",
-      "phone": "615-234-5678",
-      "email": "Saripius@Roth.burn"
+      "address": "182 Don0t Drive",
+      "phone": "615-888-8888",
+      "email": "Saripius@Roth.burnt"
     },
     {
       "id": 2,
@@ -66,9 +66,11 @@
       "email": "Glass@clean.er"
     },
     {
-      "email": "FZ@fz.com",
+      "id": 5,
       "name": "Frank Zappa",
-      "id": 5
+      "address": "555 Cucamonga Avenue",
+      "phone": "615-567-4523",
+      "email": "FZ@fz.com"
     }
   ],
   "employees": [
@@ -124,8 +126,8 @@
   "locations": [
     {
       "id": 1,
-      "name": "Nashville North",
-      "address": "8422 Johnson Pike"
+      "name": "Nashville Northe",
+      "address": "8422 Johnson Lane"
     },
     {
       "id": 2,
@@ -134,13 +136,12 @@
     },
     {
       "id": 3,
-      "name": "Nashville East",
+      "name": "Nashville EEast",
       "address": "33 Plus Park"
     },
     {
       "name": "Nashville West",
       "address": "444 West West St",
-      "employeeId": 0,
       "id": 4
     }
   ]

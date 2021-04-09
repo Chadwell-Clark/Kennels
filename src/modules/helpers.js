@@ -5,3 +5,5 @@ export function firstLetterCase(str) {
 export function splitTypeArray(arr) {
   return arr.join(" and ");
 }
+
+

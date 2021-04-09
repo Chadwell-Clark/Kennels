@@ -20,14 +20,19 @@ import { Link } from "react-router-dom";
          <h3>
            Name: <span className="card-customerName">{customer.name}</span>
          </h3>
-         <p>Address: {customer.address}</p>
+         <p className="customer__address">Address: {customer.address}</p>
+         {/* <p>Address: {customer.address}</p> */}
          <p className="customer__phone">Phone: {customer.phone}</p>
-         <button type="button" onClick={() => deleteCustomer(customer.id)}>
-           Remove Owner
-         </button>
+         <p className="customer__email">Email: {customer.email}</p>
          <Link to={`/customers/${customer.id}`}>
            <button>Details</button>
          </Link>
+         <Link to={`/customers/${customer.id}/edit`}>
+           <button>Edit</button>
+         </Link>
+         <button type="button" onClick={() => deleteCustomer(customer.id)}>
+           Remove Owner
+         </button>
        </div>
      </div>
    );

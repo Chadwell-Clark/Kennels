@@ -29,3 +29,13 @@ export const addEmployee = (newEmployee) => {
   })
   .then(response => response.json())
 }
+
+export const updateEmployee = (editedEmployee) => {
+  return fetch(`${remoteURL}/employees/${editedEmployee.id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(editedEmployee),
+  }).then((response) => response.json());
+};

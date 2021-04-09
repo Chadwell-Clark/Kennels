@@ -8,8 +8,8 @@ export const TacoCard = ({taco,devourTaco}) => (
       src="https://deltaco.com/files/menu/item/1-The-Del-Taco-%28Crunchy%29.png?v=3.99"
       alt="Delicious taco"
     ></img>
-    <button type="button" onClick={() => devourTaco(taco.id)}>
-      Devour Taco
-    </button>
+    <div id="taco">
+      Taco Force
+    </div>
   </section>
 );

@@ -21,6 +21,13 @@ export const EmployeeCard = ({ employee, deleteEmployee, locationList }) => {
           Name: <span className="card-employeeName">{employee.name}</span>
         </h3>
         <p>Address: {employee.address}</p>
+        <Link to={`/employees/${employee.id}`}>
+          <button>Details</button>
+        </Link>
+
+        <Link to={`/employees/${employee.id}/edit`}>
+        <button>Edit</button>
+        </Link>
         {locationList ? (
           ""
         ) : (
@@ -28,9 +35,6 @@ export const EmployeeCard = ({ employee, deleteEmployee, locationList }) => {
             Terminate Employee
           </button>
         )}
-        <Link to={`/employees/${employee.id}`}>
-          <button>Details</button>
-        </Link>
       </div>
     </div>
   );

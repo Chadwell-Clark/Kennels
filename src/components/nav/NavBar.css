@@ -79,17 +79,30 @@ cursor: pointer;
   transition: 0.3s,clip-path 0.4s 0.3s; 
    clip-path: polygon(0 -90px,0 10%,30% 0,40% -20px,60% -20px,70% 0,100% 10%,100% -90px,calc(100% + 15px) 50%,100% calc(100% + 90px),100% 90%,70% 100%,60% calc(100% + 20px),40% calc(100% + 20px),30% 100%,0 90%,0 calc(100% + 90px),-20px 50%);
  } */
+ .navlink {
+      box-shadow:
+    0 0 10px rgb(78, 102, 238) inset,
+    0 0 10px rgb(77, 68, 68);
+    border-radius: 10px;
+ }
 
- .navbar__link {
+ /* .navbar__link {
   background:
-    linear-gradient(currentColor 0 0) 0 0,
-    linear-gradient(currentColor 0 0) 0 0,
-    linear-gradient(currentColor 0 0) 100% 100%,
-    linear-gradient(currentColor 0 0) 100% 100%;
+  linear-gradient(currentColor 0 0) 0 0,
+  linear-gradient(currentColor 0 0) 0 0,
+  linear-gradient(currentColor 0 0) 100% 100%,
+  linear-gradient(currentColor 0 0) 100% 100%;
   background-size: var(--d, 0) 3px, 3px var(--d, 0);
   background-repeat: no-repeat;
+  border-radius: 10px;
+  
   transition: 0.3s;
-}
+} */
 .navbar__link:hover {
-  --d: 100%;
+       box-shadow:
+    0 0 10px rgb(77, 68, 68) inset,
+    0 0 10px rgb(78,102,238);
+    border-radius: 10px;
+    transition: 0.2s;
+  /* --d: 100%; */
 }

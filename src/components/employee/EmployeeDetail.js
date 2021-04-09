@@ -16,7 +16,7 @@ export const EmployeeDetail = () => {
     console.log("useEffect", employeeId);
     getEmployeeById(employeeId)
     .then((employee) => {
-      console.log("employee Object", employee.locations);
+      console.log("employee Object", employee, "locations", employee.location);
       setEmployee(employee);
       setIsLoading(false);
     });
@@ -37,18 +37,12 @@ export const EmployeeDetail = () => {
       {/* Can Map over employees and either make a component to put the employee in or
       use the employeeCard and pass in a flag that when present will keep the 
       delete button from showing via a ternary */}
-      {employee.locations?.map(
-        (location) => (
+      {
           <>
-            <div key={location.id}>{location.name}</div>
+            <div key={employee.location?.id}>{employee.location?.name}</div>
           </>
-        ) )}
-        {/* // <EmployeeCard key={employee.id} EmployeeList employee={employee} />
-      
-      {/* What's up with the question mark???? See below.*/}
-      {/* <div className="Employee__employee">Employee: {Employee.employees?.name}</div> */}
-      {/* <div className="Employee__employee">Employee: {Employee.employees?.name}</div> */}
-      {/* <div className="Employee__owner">Employee: {Employee.Employee?.name}</div> */}
+       }
+        
       <button type="button" disabled={isLoading} onClick={handleDelete}>
         Terminate Employee
       </button>
