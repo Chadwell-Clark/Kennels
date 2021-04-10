@@ -32,11 +32,7 @@ export const EmployeeEditForm = () => {
     });
   }, []);
 
-//   useEffect(() => {
-//     getAllCustomers().then((customersFromAPI) => {
-//       setCustomers(customersFromAPI);
-//     });
-//   }, []);
+
   const updateExistingEmployee = (evt) => {
     evt.preventDefault();
     setIsLoading(true);
@@ -58,7 +54,7 @@ export const EmployeeEditForm = () => {
       setEmployee(employee);
       setIsLoading(false);
     });
-  }, []);
+  }, [employeeId]);
 
   return (
     <>
@@ -104,25 +100,7 @@ export const EmployeeEditForm = () => {
               </select>
             </div>
           </fieldset>
-          {/* <fieldset>
-            <div className="form-group">
-              <label htmlFor="customerId">Customer: </label>
-              <select
-                value={employee.customerId}
-                name="customer"
-                id="customerId"
-                onChange={handleFieldChange}
-                className="form-control"
-              >
-                <option value="0">Select a customer</option>
-                {customers.map((c) => (
-                  <option key={c.id} value={c.id}>
-                    {c.name}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </fieldset> */}
+          
           <div className="alignRight">
             <button
               type="button"

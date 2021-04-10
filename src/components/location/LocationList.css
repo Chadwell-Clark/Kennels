@@ -3,3 +3,17 @@
     display: flex;
     justify-content: center;
 }
+.container-cards{
+    display:flex;
+    border: 1px solid black;
+    ;
+
+}
+.card{
+    width: 28%;
+
+}
+
+.section-content {
+    margin: 1rem;
+}

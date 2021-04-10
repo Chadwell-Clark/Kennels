@@ -61,7 +61,7 @@ export const CustomerEditForm = () => {
       setCustomer(customer);
       setIsLoading(false);
     });
-  }, []);
+  }, [customerId]);
 
   return (
     <>
@@ -76,7 +76,7 @@ export const CustomerEditForm = () => {
               id="name"
               value={customer.name}
             />
-            <label htmlFor="name">customer name</label>
+            <label htmlFor="name">Customer name</label>
 
             <input
               type="text"

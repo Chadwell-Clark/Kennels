@@ -59,7 +59,7 @@ export const LocationEditForm = () => {
       setLocation(location);
       setIsLoading(false);
     });
-  }, []);
+  }, [locationId]);
 
   return (
     <>
